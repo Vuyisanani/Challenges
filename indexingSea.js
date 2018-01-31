@@ -38,15 +38,21 @@ const users = [{
     });
     return result;
   }
-  //console.log(orchestrateUsers(users));
+  console.log(orchestrateUsers(users));
+  console.log('-----------Users-------------------------------------------')
   
   //second method
-  function searchUsers(orchestratedUsers, userTypes, property, value) {
-    //need help here
-    userTypes.forEach(userType => {
-      if (userTypes.find(userType => userType === "User")) {
-        console.log(userType);
-      }
-    });
-  }
+  function searchUsers(array, userTypes, property, value) {
+    value = value.toLowerCase();// compare both in same case      
+    return array
+         .filter(o => userTypes.includes(o.type) && o[property].toLowerCase().includes(value))
+ }
+ 
+ // input variables
+ const userTypes = ['Admin','User'],
+       prop = 'name',
+       value = 'smit';// lowercase partial of "Smith"
+       
+ const res = searchUsers(users, userTypes, prop , value )
+ console.log(res)
   
