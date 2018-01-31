@@ -125,8 +125,6 @@ let Data2 = [
 		"longitude": "-99.852343"
 	}
 ]
-
-
 function MergeArrays(Array1 , Array2){
    
     for (let i = 0 ; i < Array1.length ; i++){
