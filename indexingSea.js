@@ -29,8 +29,9 @@ const users = [{
   }]
   
   function orchestrateUsers(users) {
+// Declaring an empty object that will store the names.
     let result = {};
-  
+// Storing  names on the result object
     users.forEach(user => {
       if (result[user.type]) result[user.type].push(user.name);
       else result[user.type] = [user.name];
