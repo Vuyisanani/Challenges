@@ -41,17 +41,16 @@ const users = [{
   console.log(orchestrateUsers(users));
   console.log('-----------Users-------------------------------------------')
   
-  //second method
+  //Function that take 4 parameters
   function searchUsers(array, userTypes, property, value) {
     value = value.toLowerCase();// compare both in same case      
     return array
          .filter(o => userTypes.includes(o.type) && o[property].toLowerCase().includes(value))
  }
- 
  // input variables
- const userTypes = ['Admin','User'],
-       prop = 'name',
-       value = 'smit';// lowercase partial of "Smith"
+ const userTypes = ['User','Admin'],
+        prop = 'name',
+        value = 'Tim';// lowercase partial of "Tim"
        
  const res = searchUsers(users, userTypes, prop , value )
  console.log(res)
