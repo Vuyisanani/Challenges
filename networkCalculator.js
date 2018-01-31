@@ -5,16 +5,18 @@ function Catch(x){
 
     for(let i=0 ; i < x ; i++){
 
-    var initialTime = new Date().getTime();    
+    let initialTime = new Date().getTime();    
     fetch("http://date.jsontest.com")
          .then(function(res) {
           return res.json();
-        }).then(function(json) {
-           Add+=json.milliseconds_since_epoch - initialTime; 
-        console.log(json);
+        }).then(function(res) {
+           Add=res.milliseconds_since_epoch - initialTime; 
+        console.log(res);
+        let avg = (Add/x);
+        console.log("Average request time is ",avg);
        });
     }
-    let avg = (Add/x);
-    console.log("Average request time is ",avg);
+    
+   
 }
-Catch(1);
+Catch(3);
