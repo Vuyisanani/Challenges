@@ -38,7 +38,7 @@ const users = [{
     });
     return result;
   }
-  console.log(orchestrateUsers(users));
+  //console.log(orchestrateUsers(users));
   
   //second method
   function searchUsers(orchestratedUsers, userTypes, property, value) {
