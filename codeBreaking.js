@@ -30,3 +30,6 @@ function compression(str) {
 
 console.log(compression('aabbbcccccaa'));
 console.log(compression('xxyzzzx'));
+//-------------------------------------
+console.log(compression('ggjj'));
+console.log(compression('abcde'));
